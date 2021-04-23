@@ -1,7 +1,7 @@
 # UI Full-Stack home assignment - “Reminders App”
 
 ## Technical Requirements
-● Language: TypeScript
+● Language: TypeScript <br />
 ● Framework: React
 ● Backend: Node
 
