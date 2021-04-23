@@ -1,0 +1,16 @@
+.btn-third, btn--add-new-todo {
+  font-family: 'Righteous';
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #EAEDF9;
+  padding: 10px;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+
+.new-todo__input-fields {
+  margin: 10px;
+}
+
+

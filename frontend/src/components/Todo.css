@@ -1,0 +1,37 @@
+.todo__container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 3px 0;
+}
+
+.todo__content {
+  margin-left: 10px;
+}
+
+.todo-checkbox-name-desc {
+  display: flex;
+}
+
+.todo-input--checkbox {
+  padding-top: 16px;
+}
+
+.todo-btn--remove {
+  padding-top: 16px;
+}
+
+.todo__name {
+  text-align: left;
+}
+
+.todo__name-p {
+  font-family: 'Righteous', cursive;
+}
+
+.todo__desc-p {
+  font-size: 15px;
+}
+
+
+
