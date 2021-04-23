@@ -2,7 +2,7 @@
 
 ## Technical Requirements
 ● Language: TypeScript <br />
-● Framework: React
+● Framework: React <br />
 ● Backend: Node
 
 In the project directory, you can run:
