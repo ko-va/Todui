@@ -1,5 +1,7 @@
 # UI Full-Stack home assignment - “Reminders App”
 
+![Screenshot](screenshot-login.png)
+
 ![Screenshot](screenshot.png)
 
 ## Technical Requirements
