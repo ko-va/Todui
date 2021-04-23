@@ -1,6 +1,6 @@
 # UI Full-Stack home assignment - “Reminders App”
 
-![Screenshot](Todui-screenshot.png)
+![Screenshot](screenshot.png)
 
 ## Technical Requirements
 ● Language: TypeScript <br />
