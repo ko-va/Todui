@@ -5,8 +5,8 @@ import request from "../../request";
 import {AUTH_STATE_UNAUTHENTICATED} from "../../App";
 
 const Register = (props: ContainerComponentProps) => {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
+  const [username, setUsername] = useState<string>();
+  const [password, setPassword] = useState<string>();
 
   const register = async () => {
     await request({
@@ -28,11 +28,11 @@ const Register = (props: ContainerComponentProps) => {
 
       <div className="login__input">
 
-        <input className="login-input" type='text' value={username} placeholder='username' onChange={(e: any) => {
+        <input className="login-input" type='text' value={username} placeholder='username' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           setUsername(e.target.value)
         }} />
         <br/>
-        <input className="login-input" type='password' value={password} placeholder='oassword' onChange={(e: any) => {
+        <input className="login-input" type='password' value={password} placeholder='oassword' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           setPassword(e.target.value)
         }} />
 

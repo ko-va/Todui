@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import request from "../request";
 import './NewTodo.css';
 interface NewTodoPropsInterface {
-  reload(): any,
+  reload(): void,
   listId: number,
-  authFailure?: () => any,
+  authFailure?: () => void,
 }
 
 const NewTodo = (props: NewTodoPropsInterface) => {
@@ -16,11 +16,11 @@ const NewTodo = (props: NewTodoPropsInterface) => {
   const [expanded, setExpanded] = useState<boolean>(false);
   const [valid, setValid] = useState<boolean>(true)
 
-  const handleNameInputChange = (event: any) => {
+  const handleNameInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
 
-  const handleDescInputChange = (event: any) => {
+  const handleDescInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDesc(event.target.value);
   }
 

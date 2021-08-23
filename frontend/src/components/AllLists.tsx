@@ -6,8 +6,11 @@ import NewList from './NewList';
 import './AllLists.css';
 import request from "../request";
 
+interface Props {
+  authFailure?: () => void,
+}
 
-const AllLists = (props: any) => {
+const AllLists = (props: Props) => {
     const [allLists, setAllLists] = useState([]);
 
     const fetchData = async () => {

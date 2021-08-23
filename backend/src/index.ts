@@ -6,7 +6,6 @@ import todoRoutes from './routes/todoRoutes';
 import "reflect-metadata";
 import { createConnection, Connection } from 'typeorm';
 
-
 // variables
 const app = express();
 const port = 3001;
@@ -27,6 +26,6 @@ app.use('/users', userRoutes);
 app.use('/lists', listRoutes);
 app.use('/lists', todoRoutes);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });

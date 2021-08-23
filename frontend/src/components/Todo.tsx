@@ -2,17 +2,10 @@ import React from 'react';
 import './Todo.css';
 import TodoModel from '../types/models/Todo'
 
-/*
-interface Todo {
-    name: string;
-    description: string;
-    isToggled: boolean;
-}*/
-
 interface TodoProps {
     todo: TodoModel;
-    removeTodo(id: number): any;
-    updateTodo(id: number, isToggled: boolean): any;
+    removeTodo(id: number): void;
+    updateTodo(id: number, isToggled: boolean): void;
 }
 
 const Todo = (props: TodoProps) =>  {

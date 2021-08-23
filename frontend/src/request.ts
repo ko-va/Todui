@@ -1,12 +1,12 @@
 import config from "./config";
-import {LOCAL_STORAGE_TOKEN_KEY} from "./App";
+import { LOCAL_STORAGE_TOKEN_KEY } from "./App";
 
 interface RequestOptions {
   method?: string,
   path?: string,
   body?: any,
   isProtected?: boolean,
-  authFailure?: () => any,
+  authFailure?: () => void,
 }
 
 export default (options: RequestOptions) => {
@@ -18,12 +18,14 @@ export default (options: RequestOptions) => {
 
   options = {...defaultOptions, ...options}
 
-  const fetchOptions: any = {
+  const fetchOptions: RequestInit = {
     method: options.method,
-    headers: {
-      'Content-Type': 'application/json'
-    },
   }
+
+  
+  const headers: HeadersInit = {
+    'Content-Type': 'application/json'
+  };
 
   if (options.body) {
     fetchOptions.body = JSON.stringify(options.body)
@@ -31,10 +33,14 @@ export default (options: RequestOptions) => {
 
   if (options.isProtected) {
     const token = localStorage.getItem(LOCAL_STORAGE_TOKEN_KEY)
-    fetchOptions.headers['Authorization'] = `Bearer ${token}`
+    
+    headers.Authorization = `Bearer ${token}`
   }
 
-  return fetch(`${config.api}/${options.path}`, fetchOptions)
+  return fetch(`${config.api}/${options.path}`, {
+    ...fetchOptions,
+    headers: headers,
+  })
     .then(response => {
       if (response.status < 300) {
         return response.json()

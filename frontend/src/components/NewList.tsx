@@ -3,8 +3,8 @@ import './NewList.css';
 import request from "../request";
 
 interface NewListPropInterface {
-  reload(): any,
-  authFailure?: () => any,
+  reload(): void,
+  authFailure?: () => void,
 }
 
 const NewList = (props: NewListPropInterface) => {
@@ -13,11 +13,11 @@ const NewList = (props: NewListPropInterface) => {
   const [desc, setDesc] = useState<string|undefined>();
   const [expanded, setExpanded] = useState<boolean>(false);
 
-  const handleNameInputChange = (event: any) => {
+  const handleNameInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
 
-  const handleDescInputChange = (event: any) => {
+  const handleDescInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDesc(event.target.value);
   }
 

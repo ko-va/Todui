@@ -1,14 +1,15 @@
 import React from 'react';
 import './List.css';
 import TodoList from '../types/models/TodoList';
-import Todo from './Todo';
+import TodoType from '../types/models/Todo';
 import NewTodo from './NewTodo';
 import request from "../request";
+import Todo from './Todo';
 
 interface ListPropInterface {
     list: TodoList,
-    reload(): any,
-    authFailure?: () => any,
+    reload(): void,
+    authFailure?: () => void,
 }
 
 const List = (props: ListPropInterface) => {
@@ -47,7 +48,7 @@ const List = (props: ListPropInterface) => {
     await props.reload()
   }
 
-  const sortedTodos = list.todos.sort((a: any, b: any) => a.isToggled - b.isToggled)
+  const sortedTodos = list.todos.sort((a: TodoType, b: TodoType) => +a.isToggled - +b.isToggled)
 
   return (
     <div className="list__container">

@@ -1,7 +1,7 @@
 export default interface ContainerComponentProps {
-  setToken(token: string, username: string): any;
-  logout(): any;
-  setAuthState(state: string): any;
+  setToken(token: string, username: string): void;
+  logout(): void;
+  setAuthState(state: string): void;
   authState: string;
   username: string;
 }

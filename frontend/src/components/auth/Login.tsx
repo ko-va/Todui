@@ -31,13 +31,13 @@ const Login = (props: ContainerComponentProps) => {
       <div className="login__form">
 
         <div className="login__input">
-          <input className="login-input" type='text' value={username} placeholder='username' onChange={(e: any) => {
+          <input className="login-input" type='text' value={username} placeholder='username' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             setUsername(e.target.value)
           }} />
 
           <br />
 
-          <input className="login-input" type='password' value={password} placeholder='password' onChange={(e: any) => {
+          <input className="login-input" type='password' value={password} placeholder='password' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             setPassword(e.target.value)
           }} />
 
